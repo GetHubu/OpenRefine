@@ -48,7 +48,6 @@ import com.google.refine.util.TestUtils;
 
 public class TypeTests extends RefineTest {
     private static Properties bindings;
-    private static final Integer[] ZERO_TO_TWO = new Integer[] {0, 1, 2};
     private static OffsetDateTime dateTimeValue = OffsetDateTime.parse("2017-05-12T05:45:00+00:00", DateTimeFormatter.ISO_OFFSET_DATE_TIME);
 
     @Override
@@ -102,6 +101,6 @@ public class TypeTests extends RefineTest {
     public void serializeType() {
         String json = "{\"description\":\"Returns the type of o as a string ('string', 'date', 'number', 'array', 'boolean', 'error' or a class name)\",\"params\":\"object o\",\"returns\":\"string\"}";
         TestUtils.isSerializedTo(new Type(), json);
-    }    
+    }
 }
 
